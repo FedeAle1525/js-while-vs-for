@@ -9,8 +9,9 @@ while (numeriDispari.length < 10){
   // 2.1 - Richiesta Numero a Utente
   const numero = parseInt(prompt("Inserisci un numero intero ;)"));
 
-  // 2.2 - Controllo che il Numero inserito sia effettivamento un Numero
-  if ((isNaN(numero)) === false){
+  // 2.2 - Controllo che il Numero inserito sia effettivamento un Numero e che non sia già incluso, 
+          // cosi da avere tutti numeri diversi
+  if ((isNaN(numero)) === false && numeriDispari.includes(numero) === false && numero >= 0){
 
     // 2.3 - Calcolo resto per controllo Numero Dispari
     const resto = numero % 2;
