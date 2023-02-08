@@ -11,6 +11,13 @@ while (numeriDispari.length < 10){
 
   // 2.2 - Controllo che il Numero inserito sia effettivamento un Numero e che non sia già incluso, 
           // cosi da avere tutti numeri diversi
+
+    // 2.2.1 - Controllo alternativo su NaN
+      // if (isNaN(num)){
+      //   // Salta istruzioni ciclo e passa alla prossima interazione
+      //   continue;
+      // }
+
   if ((isNaN(numero)) === false && numeriDispari.includes(numero) === false && numero >= 0){
 
     // 2.3 - Calcolo resto per controllo Numero Dispari
@@ -21,9 +28,11 @@ while (numeriDispari.length < 10){
       numeriDispari.push(numero);
     }
   }
+  
 }
 
 // 3. Stampo i Numeri della Lista a console (uno per volta)
+
 for (let i=0; i < numeriDispari.length; i++){
   console.log("Il numero della Lista con Indice ", i, " è: ", numeriDispari[i]);
 }
